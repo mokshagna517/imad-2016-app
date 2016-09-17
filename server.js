@@ -14,7 +14,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('https://lh3.googleusercontent.com/-81nCHljgMKc/VGS374TSQEI/AAAAAAAAABs/dinpzeyg1TkCG-JrvucRIn7hYaBP8t-LQCEw/w139-h140-p/img257.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'img257.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'img257.jpg'));
 });
 
 
