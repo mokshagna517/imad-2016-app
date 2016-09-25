@@ -21,4 +21,6 @@ body {
 .img-medium {
     height: 200px;
 }
-
+#galaxy{
+    border: 5px dashed;
+}
