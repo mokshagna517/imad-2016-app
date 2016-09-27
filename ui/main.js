@@ -10,6 +10,6 @@ var button=document.getElementById('counter');
              
          }
      };
-     request.pen('GET','http://mokshagna517.imad.hasura-app.io/',true);
+     request.open('GET','http://mokshagna517.imad.hasura-app.io/',true);
      request.send(null);
  };
