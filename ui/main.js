@@ -1,15 +1,5 @@
-console.log('Loaded!');
-var button=document.getElementById('counter');
- button.onclick=function(){
-     var request= new XMLHttpRequest();
-     request.onreadystatechange=function(){
-         if(request.readystate===200){
-             var counter=request.responseText;
-             var span=document.getElementById('count');
-             span.innerHTML=counter.toString();
-             
-         }
+console.log('Loaded');
+     var img=document.getElementById('move');
+     img.onclick=function(){
+         img.style.marginleft= '100px';
      };
-     request.open('GET','http://mokshagna517.imad.hasura-app.io/',true);
-     request.send(null);
- };
