@@ -1,5 +1,6 @@
 console.log('Loaded');
-     var img=document.getElementById('move');
+
+     var img=document.getElementById("move");
      img.onclick=function(){
-         img.style.marginleft= '100px';
+         img.style.margin_left= 100px;
      };
