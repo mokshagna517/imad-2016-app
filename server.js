@@ -24,6 +24,11 @@ app.get('/ui/style.css', function (req, res) {
 app.get('https://lh3.googleusercontent.com/-81nCHljgMKc/VGS374TSQEI/AAAAAAAAABs/dinpzeyg1TkCG-JrvucRIn7hYaBP8t-LQCEw/w139-h140-p/img257.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'img257.jpg'));
 });
+counter=0;
+app.get('/counter', function(req,res){
+    counter=counter+1;
+    res.send(counter.toString());
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
