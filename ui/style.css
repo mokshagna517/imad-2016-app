@@ -23,4 +23,11 @@ body {
 .img-medium {
     height: 200px;
 }
+.information{
+    font-family: Verdana;
+    background-color: blue;
+    font-size: 25px;
+    margin-left:100px;
+    margin-right: 100px;
+}
 
