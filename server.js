@@ -16,28 +16,28 @@ var articleone={
 };
 
 function createTemplate(data){
-    var title=data.title;
-    var para1=data.para1;
-    var heading=data.heading;
-    var content=data.content;
+    var tit=data.title;
+    var para=data.para1;
+    var head=data.heading;
+    var cont=data.content;
 
 
 var htmlTemplate=`<!doctype html>
 <html>
     <head>
         <title>
-            ${title}
+            ${tit}
         </title>
         <link type="text/css" rel="stylesheet" href="/ui/style.css" />
     </head>
     <body>
         <div class="center">
             <p>
-                ${para1}
+                ${para}
             </p>
-            <h3>${heading} </h3>
+            <h3>${head} </h3>
             <ul>
-             ${content}
+             ${cont}
                 
             </ul>
             
