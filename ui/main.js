@@ -20,9 +20,9 @@ console.log('Loaded');
          request.onreadystatechange=function(){
              if(request.readystate===XMLHttpRequest.DONE){
                  if(request.status==='200'){
-                 var counter=request.responseText;
+                 var c=request.responseText;
                  var span=document.getElementById('count');
-                 span.innerHTML=counter.toString();
+                 span.innerHTML=c.toString();
                  }
              }
              
