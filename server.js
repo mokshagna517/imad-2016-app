@@ -13,7 +13,7 @@ articleone:
                 <li>Kesari</li>
                 <li>Noodles</li>
                 <li>Chocolate cake</li>`},
-articletwo:
+articletwo :
      {title: 'Article Two',
      para1: 'This is article two',
     heading: 'My favorite actors and cricketers',
@@ -79,12 +79,7 @@ app.get('/:articleName', function(req,res){
    var articlName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
-app.get('/articletwo', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
-});
-app.get('/articlethree', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'articlethree.html'));
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
