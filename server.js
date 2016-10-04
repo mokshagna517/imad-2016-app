@@ -21,7 +21,7 @@ articletwo :
                 <li>Virat Kohli</li>
                 <li>Roger Federer</li>
                 <li>Bruce Lee</li>`},
-articlethree: 
+articlethree : 
        {title: 'Article Three',
      para1: 'This is article three',
     heading: 'My favorite brands in automobiles',
