@@ -2,7 +2,7 @@ console.log('Loaded');
 
      
      
-     
+     var element=document.getElementById('counter');
      
      
      element.onclick=function(){
