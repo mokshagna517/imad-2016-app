@@ -35,12 +35,11 @@ articlethree :
 };
 
 function createTemplate(data){
-    var tit=articles.data.title;
-    var para=articles.data.para1;
-    var head=articles.data.heading;
-    var cont=articles.data.content;
-    var htmltemplate=
-`<html>    
+    var tit=data.title;
+    var para=data.para1;
+    var head=data.heading;
+    var cont=data.content;
+    var htmltemplate=`<html>    
     <head>
         <title>
             ${tit}
@@ -64,6 +63,7 @@ function createTemplate(data){
  </body>
 </html>`;
 
+return htmltemplate;
 }
 
 
