@@ -41,7 +41,7 @@ function createTemplate(data){
     var cont=data.content;
 
 
-var htmlTemplate=`<!doctype html>
+var htmlTemplate=`<!DOCTYPE html>
 <html>
     <head>
         <title>
