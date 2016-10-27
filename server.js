@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
+var articles=[{
 articleone:
     {title: 'Article One',
     para1: 'This is article one',
@@ -28,11 +28,11 @@ articlethree :
     content:  `<li>Mahesh Babu</li>
                 <li>Virat Kohli</li>
                 <li>Roger Federer</li>
-                <li>Bruce Lee</li>}
+                <li>Bruce Lee</li>`}
                 
                 
     
-}
+}];
 
 function createTemplate(data){
     var tit=data.title;
@@ -40,7 +40,7 @@ function createTemplate(data){
     var head=data.heading;
     var cont=data.content;
     var htmltemplate=
-<html>    
+`<html>    
     <head>
         <title>
             ${tit}
@@ -62,7 +62,7 @@ function createTemplate(data){
 
         
  </body>
-</html>;
+</html>`;
 
 }
 
