@@ -25,10 +25,10 @@ articlethree :
        {title: "Article Three",
      para1: "This is article three",
     heading: "My favorite brands in automobiles",
-    content:  `<li>Mahesh Babu</li>
-                <li>Virat Kohli</li>
-                <li>Roger Federer</li>
-                <li>Bruce Lee</li>`}
+    content:  `<li>Audi</li>
+                <li>Lambhorghini</li>
+                <li>Mustang</li>
+                <li>Ferrari</li>`}
                 
                 
     
