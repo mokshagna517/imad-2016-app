@@ -32,7 +32,7 @@ articlethree :
                 
                 
     
-};
+}
 
 function createTemplate(data){
     var tit=data.title;
@@ -63,7 +63,7 @@ function createTemplate(data){
         
  </body>
 </html>;
-`
+
 }
 
 
