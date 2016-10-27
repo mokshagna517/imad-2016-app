@@ -7,9 +7,9 @@ var element=document.getElementById("counter");
          request.onreadystatechange=function () {
              if(request.readyState===XMLHttpRequest.DONE){
                  if(request.status===200){
-                 var counter=request.responseText;
+                 var i=request.responseText;
                  var span=document.getElementById("count");
-                 span.innerHTML=counter.toString();
+                 span.innerHTML=i.toString();
                  }
              }
              
