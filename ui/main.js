@@ -1,5 +1,5 @@
 console.log('Loaded');
-var element=document.getElementById('counter');
+var element=document.getElementById("counter");
       element.onclick= function () {
          
          var request=new XMLHttpRequest();
@@ -8,7 +8,7 @@ var element=document.getElementById('counter');
              if(request.readyState===XMLHttpRequest.DONE){
                  if(request.status===200){
                  var counter=request.responseText;
-                 var span=document.getElementById('count');
+                 var span=document.getElementById("count");
                  span.innerHTML=counter.toString();
                  }
              }
