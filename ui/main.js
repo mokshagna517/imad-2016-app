@@ -1,6 +1,6 @@
 console.log('Loaded');
 var element=document.getElementById('counter');
-      element.click= function () {
+      element.onclick= function () {
          
          var request=new XMLHttpRequest();
          
