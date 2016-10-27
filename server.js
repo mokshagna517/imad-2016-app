@@ -6,26 +6,26 @@ var app = express();
 app.use(morgan('combined'));
 var articles=[{
 articleone:
-    {title: "Article One",
-    para1: "This is article one",
-    heading: "My favorite food items",
-    content:  `<li>Chicken Biryani</li>
+    {"title": "Article One",
+    "para1": "This is article one",
+    "heading": "My favorite food items",
+    "content":  `<li>Chicken Biryani</li>
                 <li>Kesari</li>
                 <li>Noodles</li>
                 <li>Chocolate cake</li>`},
 articletwo :
-     {title: "Article Two",
-     para1: "This is article two",
-    heading: "My favorite actors and cricketers",
-    content:  `<li>Mahesh Babu</li>
+     {"title": "Article Two",
+     "para1": "This is article two",
+    "heading": "My favorite actors and cricketers",
+    "content":  `<li>Mahesh Babu</li>
                 <li>Virat Kohli</li>
                 <li>Roger Federer</li>
                 <li>Bruce Lee</li>`},
 articlethree : 
-       {title: "Article Three",
-     para1: "This is article three",
-    heading: "My favorite brands in automobiles",
-    content:  `<li>Mahesh Babu</li>
+       {"title": "Article Three",
+     "para1": "This is article three",
+    "heading": "My favorite brands in automobiles",
+    "content":  `<li>Mahesh Babu</li>
                 <li>Virat Kohli</li>
                 <li>Roger Federer</li>
                 <li>Bruce Lee</li>`}
