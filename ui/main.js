@@ -13,7 +13,9 @@ var c=0;
               
               
           }
-      };    
+      };
+      request.open('GET','http://mokshagna517.imad.hasura-app.io/counter',true);
+      request.send(null);
           
   };      
 
