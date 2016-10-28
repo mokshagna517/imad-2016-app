@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var articles={
 articleone:
-    {title: "Article One",
+    {source: "Article One",
     para1: "This is article one",
     heading: "My favorite food items",
     content:  `<li>Chicken Biryani</li>
@@ -14,7 +14,7 @@ articleone:
                 <li>Noodles</li>
                 <li>Chocolate cake</li>`},
 articletwo :
-     {title: "Article Two",
+     {source: "Article Two",
      para1: "This is article two",
     heading: "My favorite actors and cricketers",
     content:  `<li>Mahesh Babu</li>
@@ -22,7 +22,7 @@ articletwo :
                 <li>Roger Federer</li>
                 <li>Bruce Lee</li>`},
 articlethree : 
-       {title: "Article Three",
+       {source: "Article Three",
      para1: "This is article three",
     heading: "My favorite brands in automobiles",
     content:  `<li>Audi</li>
@@ -34,8 +34,8 @@ articlethree :
     
 };
 
-function createTemplate(data){
-    var tit=data.title;
+function createTemplate( data){
+    var tit=data.source;
     var para=data.para1;
     var head=data.heading;
     var cont=data.content;
