@@ -9,4 +9,4 @@ var c=0;
       p.innerHTML=c.toString();
       
       
-  }
+  };
