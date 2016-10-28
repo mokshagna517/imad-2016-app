@@ -5,41 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
-articleone:
-    {source: "Article One",
+articleone: {title: "Article One",
     para1: "This is article one",
     heading: "My favorite food items",
     content:  `<li>Chicken Biryani</li>
                 <li>Kesari</li>
                 <li>Noodles</li>
                 <li>Chocolate cake</li>`},
-articletwo :
-     {source: "Article Two",
+   
+articletwo : {title: "Article Two",
      para1: "This is article two",
     heading: "My favorite actors and cricketers",
     content:  `<li>Mahesh Babu</li>
                 <li>Virat Kohli</li>
                 <li>Roger Federer</li>
                 <li>Bruce Lee</li>`},
-articlethree : 
-       {source: "Article Three",
+    
+articlethree : {title: "Article Three",
      para1: "This is article three",
     heading: "My favorite brands in automobiles",
     content:  `<li>Audi</li>
                 <li>Lambhorghini</li>
                 <li>Mustang</li>
                 <li>Ferrari</li>`}
+       
                 
                 
     
 };
 
 function createTemplate( data){
-    var tit=data.source;
+    var tit=data.title;
     var para=data.para1;
     var head=data.heading;
     var cont=data.content;
-    var htmltemplate=`<html>    
+    var htmlTemplate=`<html>    
     <head>
         <title>
             ${tit}
@@ -63,7 +63,7 @@ function createTemplate( data){
  </body>
 </html>`;
 
-return htmltemplate;
+return htmlTemplate;
 }
 
 
