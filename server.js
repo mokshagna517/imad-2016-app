@@ -75,14 +75,6 @@ function createTemplate( data){
 return htmlTemplate;
 }
 
-var counter=0;
-app.get('/counter', function(req,res){
-    counter=counter+1;
-    res.send(counter.toString());
-});
-
-
-
 
 
 
@@ -102,6 +94,15 @@ app.get('/test-db',function(req,res){
             res.send(JSON.stringify(result));
         }
     });
+    var counter=0;
+app.get('/counter', function(req,res){
+    counter=counter+1;
+    res.send(counter.toString());
+});
+
+
+
+
     
 });
 var names=[];
