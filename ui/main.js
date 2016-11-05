@@ -41,7 +41,7 @@ var c=0;
           
 var nameInput=document.getElementById("name");
               var name=nameInput.value;
-              request.open('GET','http://mokshagna517.imad.hasura-app.io/submit-name/',true);
+              request.open('GET','http://mokshagna517.imad.hasura-app.io/submit-name/?name',true);
               request.send(null);
           
           
