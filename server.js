@@ -75,7 +75,7 @@ function createTemplate( data){
 return htmlTemplate;
 }
 
-
+var pool=new Pool(config);
 
 
 app.get('/', function (req, res) {
@@ -105,7 +105,7 @@ app.get('/articles/:articleName', function(req,res){
    
     
 
-var pool=new Pool(config);
+
 app.get('/test-db',function(err,res){
     
     
