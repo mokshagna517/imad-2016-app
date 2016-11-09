@@ -14,9 +14,12 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
-
+var pool=new Pool(config);
 function createTemplate( data){
-   
+    var tit=data.title;
+    var para=data.para1;
+    var head=data.heading;
+    var cont=data.content;
     var htmlTemplate=`<html>    
     <head>
         <title>
@@ -43,7 +46,7 @@ function createTemplate( data){
 return htmlTemplate;
 }
 
-var pool=new Pool(config);
+
 
 
 app.get('/', function (req, res) {
