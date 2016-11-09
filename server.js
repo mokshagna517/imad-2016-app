@@ -16,10 +16,7 @@ var app = express();
 app.use(morgan('combined'));
 
 function createTemplate( data){
-    var tit=data.title;
-    var para=data.para1;
-    var head=data.heading;
-    var cont=data.content;
+   
     var htmlTemplate=`<html>    
     <head>
         <title>
