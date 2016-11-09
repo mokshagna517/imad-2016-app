@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto=require('crypto');
 var config={
     user: 'mokshagna517',
     db: 'mokshagna517',
@@ -81,7 +82,17 @@ var pool=new Pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+function hash(input,salt){
+    var hashed=crypto.pbkdf25ync(input,salt,10000,512,'sha512');
+    return hashed.toString('hex');
+    
+}
 
+
+app.get('/hash/:input',function(req,res){
+    var hashedstring=hash(req.params.input, "randomstring");
+    res.send(hashedstring);
+});
 app.get('/articles/:articleName', function(req,res){
     
     pool.query("SELECT * FROM articles WHERE title= '"+req.params.articleName+"'",function(err,result){
