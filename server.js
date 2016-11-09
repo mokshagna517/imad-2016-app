@@ -35,8 +35,7 @@ function createTemplate( data){
             <h3>${head} </h3>
             <ul>
              ${cont}
-                
-            </ul>
+             </ul>
             
          </div>
  <script type='text/javascript' src='/ui/main.js'></script>
