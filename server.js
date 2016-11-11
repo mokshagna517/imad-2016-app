@@ -59,6 +59,7 @@ function hash(input,salt){
     return hashed.toString('hex');
     
 }
+app.post('/register',function(req,res))
 
 
 app.get('/hash/:input',function(req,res){
