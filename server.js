@@ -45,6 +45,8 @@ function createTemplate( data){
              </ul>
             
          </div>
+         <div id="comment_form">
+         </div>
  <script type='text/javascript' src='/ui/article.js'></script>
         
  </body>
