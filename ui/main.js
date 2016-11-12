@@ -39,7 +39,7 @@ var username=document.getElementById("username").value;
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged in");
-                      alert("You logged in successfully as");
+                      alert("You logged in successfully ");
                       }
                       else{
                           alert("Error ");
