@@ -160,7 +160,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!')
+                                res.status(200).send('Comment inserted!');
                             }
                         });
                 }
@@ -248,7 +248,7 @@ app.get('/madi.png', function (req, res) {
 app.get('/ui/main.js', function(req,res){
     res.sendFile(path.join(__dirname, 'ui','main.js'));
 });
-app.get('/register.js',function(req,res){
+app.get('/ui/register.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','register.js'));
 });
 
