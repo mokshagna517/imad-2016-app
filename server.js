@@ -45,7 +45,7 @@ function createTemplate( data){
              </ul>
             
          </div>
-
+ <script type='text/javascript' src='/ui/article.js'></script>
         
  </body>
 </html>`;
@@ -149,12 +149,12 @@ app.post('/submit-comment/:articleName', function (req, res) {
                 res.status(500).send(err.toString());
             } else {
                 if (result.rows.length === 0) {
-                    res.status(400).send('Article not found');
+                    res.status(404).send('Article not found');
                 } else {
                     var articleId = result.rows[0].id;
                     // Now insert the right comment for this article
                     pool.query(
-                        "INSERT INTO comment (comment, article_id, user_id) VALUES ($1, $2, $3)",
+                        "INSERT INTO comments (comment, article-id, user-id) VALUES ($1, $2, $3)",
                         [req.body.comment, articleId, req.session.auth.userId],
                         function (err, result) {
                             if (err) {
@@ -250,6 +250,9 @@ app.get('/ui/main.js', function(req,res){
 });
 app.get('/ui/register.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','register.js'));
+});
+app.get('/ui/article.js',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article.js'));
 });
 
 
