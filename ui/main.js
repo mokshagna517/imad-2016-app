@@ -43,7 +43,10 @@ var username=document.getElementById("user-name").value;
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
+                var loggedin=document.getElementById('login_Area');
+                var data=`
+                <a href="http://mokshagna517.imad.hasura-app.io/logout">Logout</a>`;
+              res.send(loggedin.innerHTML=data);
             } 
         }
      };
