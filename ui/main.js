@@ -10,6 +10,11 @@
                   if(request.status===200){
                       console.log("user logged in");
                       alert("You logged in successfully ");
+                       var loggedin=document.getElementById('login_Area');
+                var data=`
+                <a href="http://mokshagna517.imad.hasura-app.io/logout">Logout</a>`;
+             loggedin.innerHTML=data;
+                      
                       }
                       else{
                           alert("Error!password is incorrect ");
@@ -43,12 +48,7 @@ var username=document.getElementById("user-name").value;
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                if(req.session && req.session.auth ){
-                var loggedin=document.getElementById('login_Area');
-                var data=`
-                <a href="http://mokshagna517.imad.hasura-app.io/logout">Logout</a>`;
-             loggedin.innerHTML=data;
-                }
+            
             } 
         }
      };
