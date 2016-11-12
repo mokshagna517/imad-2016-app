@@ -1,6 +1,6 @@
    
 
-      var submit=document.getElementById('submit_btn');
+      var submit=document.getElementById("submit_btn");
       submit.onclick=function(){
           var request=new XMLHttpRequest();
           request.onreadystatechange=function(){
@@ -32,8 +32,8 @@ var username=document.getElementById("username").value;
           
       };
 
-      var submit=document.getElementById('submit-btn');
-      submit.onclick=function(){
+      var sub=document.getElementById("submit-btn");
+      sub.onclick=function(){
           var request=new XMLHttpRequest();
           request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
