@@ -55,3 +55,6 @@ var username=document.getElementById("user-name").value;
       request.open('GET', '/check-login', true);
     request.send(null);
     }
+    loadLogin();
+    
+    
