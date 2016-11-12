@@ -22,9 +22,10 @@
           
 var username=document.getElementById("username").value;
               var password=document.getElementById("password").value;
-              request.open('POST','http://mokshagna517.imad.hasura-app.io/create-user',true);
-              console.log('username');
+               console.log('username');
               console.log('password');
+              request.open('POST','http://mokshagna517.imad.hasura-app.io/create-user',true);
+             
               request.setRequestHeader('Content-Type','application/json');
               request.send(JSON.stringify({username :username,password:password}));
           
