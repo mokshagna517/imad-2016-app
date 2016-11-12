@@ -12,7 +12,7 @@
                       alert("You logged in successfully ");
                       }
                       else{
-                          alert("Error ");
+                          alert("Error!password is incorrect ");
                       }
                       
                      loadLogin(); 
