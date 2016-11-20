@@ -78,7 +78,7 @@ function loadComments () {
                 }
                 comments.innerHTML = content;
             } else {
-                comments.innerHTML='<p>Oops! Could not load comments!</p>';
+                alert("could not load comments");
             }
         }
     };
