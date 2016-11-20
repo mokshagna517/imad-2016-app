@@ -83,7 +83,7 @@ function loadComments () {
         }
     };
     
-    request.open('GET', '/get-comments/' + currentArticleTitleData, true);
+    request.open('GET', '/get-comments/' + currentArticleData, true);
     request.send(null);
 }
 loadLogin();
