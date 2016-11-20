@@ -31,7 +31,7 @@ function loadCommentForm(){
           
         };
        var comment = document.getElementById('comment_text').value;
-        request.open('POST', '/submit-comment/' + currentArticleTitleData, true);
+        request.open('POST', '/submit-comment/' + currentArticleData, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));    
 
