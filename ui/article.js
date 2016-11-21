@@ -1,6 +1,6 @@
 var currentArticleData=window.location.pathname.split('/')[2];
 var reqArticleTitle=currentArticleData.replace("%20"," ");
-console.log("reqArticleTitle");
+console.log(reqArticleTitle);
 function loadCommentForm(){
     var commentformhtml=`
     <h4>Submit a Comment</h4>
