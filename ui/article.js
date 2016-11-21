@@ -1,4 +1,6 @@
 var currentArticleData=window.location.pathname.split('/')[2];
+var reqArticleTitle=currentArticleData.replace("%20"," ");
+
 function loadCommentForm(){
     var commentformhtml=`
     <h4>Submit a Comment</h4>
@@ -31,7 +33,7 @@ function loadCommentForm(){
           
         };
        var comment = document.getElementById('comment_text').value;
-        request.open('POST', '/submit-comment/' + currentArticleData, true);
+        request.open('POST', '/submit-comment/' + reqArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));    
 
@@ -83,7 +85,7 @@ function loadComments () {
         }
     };
     
-    request.open('GET', '/get-comments/' + currentArticleData, true);
+    request.open('GET', '/get-comments/' + reqArticleTitle, true);
     request.send(null);
 }
 loadLogin();
