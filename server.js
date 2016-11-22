@@ -141,6 +141,29 @@ app.post('/login',function(req,res){
      delete req.session.auth;
       res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
   }); 
+  app.get('/get-articles', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM articles ORDER BY id DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+app.get('/get-comments/:articleName', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT comments.*, "user".username FROM articles, comments, "user" WHERE articles.title = $1 AND articles.id = comments.article-id AND comments.user-id = "user".id ORDER BY comments.timestamp DESC', [req.params.articleName], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
     
 app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
@@ -172,18 +195,6 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-app.get('/get-comments/:articleName', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT comments.*, "user".username FROM articles, comments, "user" WHERE articles.title = $1 AND articles.id = comments.article-id AND comments.user-id = "user".id ORDER BY comments.timestamp DESC', [req.params.articleName], function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-
 
 
 
