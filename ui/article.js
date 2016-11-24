@@ -36,7 +36,7 @@ function loadCommentForm(){
        console.log(comment);
         request.open('POST', 'http://mokshagna517.imad.hasura-app.io/submit-comment/' + reqArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({comment: comment}));    
+        request.send(JSON.stringify({comment:comment}));  
 
 };
 }
